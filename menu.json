@@ -1,0 +1,36 @@
+{
+  "menu": {
+    "width": 280,
+    "height": 340,
+    "backgroundColor": "#121212",
+    "borderColor": "#6a00ff",
+    "borderSize": 2,
+    "cornerRadius": 12,
+    "title": {
+      "text": "Vice Online Mod",
+      "color": "#ffffff",
+      "size": 16
+    }
+  },
+
+  "elements": [
+    {
+      "type": "text",
+      "text": "Player",
+      "color": "#aaaaaa",
+      "size": 14
+    },
+    {
+      "type": "switch",
+      "text": "God Mode",
+      "id": "godmode",
+      "colorOn": "#6a00ff",
+      "colorOff": "#444444"
+    },
+    {
+      "type": "switch",
+      "text": "Infinite Ammo",
+      "id": "ammo"
+    }
+  ]
+}
