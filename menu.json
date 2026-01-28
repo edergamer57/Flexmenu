@@ -1,36 +1,128 @@
 {
   "menu": {
-    "width": 280,
-    "height": 340,
-    "backgroundColor": "#121212",
-    "borderColor": "#6a00ff",
-    "borderSize": 2,
-    "cornerRadius": 12,
-    "title": {
-      "text": "Vice Online Mod",
-      "color": "#ffffff",
-      "size": 16
-    }
+    "title": "Vice Online Mod",
+    "x": 80,
+    "y": 60,
+    "width": 520,
+    "height": 760,
+
+    "backgroundColor": "#000000CC",
+    "borderColor": "#7A00FF",
+    "borderWidth": 4,
+    "borderRadius": 20,
+
+    "shadow": true,
+    "shadowColor": "#5500FF",
+    "shadowRadius": 25,
+
+    "draggable": true,
+    "gravity": "TOP_LEFT",
+
+    "titleTextSize": 22,
+    "titleTextColor": "#FFFFFF",
+    "titleAlignment": "CENTER"
   },
 
-  "elements": [
+  "sections": [
+    {
+      "name": "Player",
+      "x": 20,
+      "y": 80,
+      "textSize": 18,
+      "textColor": "#AAAAAA"
+    }
+  ],
+
+  "items": [
     {
       "type": "text",
       "text": "Player",
-      "color": "#aaaaaa",
-      "size": 14
+      "x": 25,
+      "y": 90,
+      "textSize": 18,
+      "textColor": "#AAAAAA"
     },
+
     {
       "type": "switch",
+      "id": "god_mode",
       "text": "God Mode",
-      "id": "godmode",
-      "colorOn": "#6a00ff",
-      "colorOff": "#444444"
+      "x": 30,
+      "y": 130,
+      "width": 460,
+      "height": 60,
+
+      "textSize": 20,
+      "textColor": "#FFFFFF",
+
+      "onColor": "#00FF88",
+      "offColor": "#444444",
+      "thumbColor": "#FFFFFF",
+
+      "borderColor": "#7A00FF",
+      "borderWidth": 2,
+      "borderRadius": 14,
+
+      "default": false,
+      "nativeFunction": "setGodMode"
     },
+
     {
       "type": "switch",
+      "id": "infinite_ammo",
       "text": "Infinite Ammo",
-      "id": "ammo"
+      "x": 30,
+      "y": 200,
+      "width": 460,
+      "height": 60,
+
+      "textSize": 20,
+      "textColor": "#FFFFFF",
+
+      "onColor": "#00FF88",
+      "offColor": "#444444",
+
+      "borderColor": "#7A00FF",
+      "borderWidth": 2,
+      "borderRadius": 14,
+
+      "default": false,
+      "nativeFunction": "setInfiniteAmmo"
+    },
+
+    {
+      "type": "button",
+      "id": "teleport",
+      "text": "Teleport to Marker",
+      "x": 30,
+      "y": 270,
+      "width": 460,
+      "height": 60,
+
+      "textSize": 20,
+      "textColor": "#FFFFFF",
+
+      "backgroundColor": "#7A00FF",
+      "pressedColor": "#5500AA",
+
+      "borderRadius": 16,
+      "nativeFunction": "teleportToMarker"
+    },
+
+    {
+      "type": "checkbox",
+      "id": "noclip",
+      "text": "No Clip",
+      "x": 30,
+      "y": 340,
+
+      "textSize": 18,
+      "textColor": "#FFFFFF",
+
+      "checkColor": "#00FF88",
+      "default": false,
+
+      "nativeFunction": "setNoClip"
     }
   ]
 }
