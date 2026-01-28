@@ -1,128 +1,115 @@
 {
   "menu": {
-    "title": "Vice Online Mod",
-    "x": 80,
-    "y": 60,
-    "width": 520,
-    "height": 760,
-
-    "backgroundColor": "#000000CC",
-    "borderColor": "#7A00FF",
-    "borderWidth": 4,
-    "borderRadius": 20,
-
-    "shadow": true,
-    "shadowColor": "#5500FF",
-    "shadowRadius": 25,
-
+    "size": {
+      "width": 420,
+      "height": 600
+    },
+    "position": {
+      "x": 100,
+      "y": 200
+    },
+    "background": {
+      "color": "#141414",
+      "radius": 18,
+      "border": {
+        "color": "#5a00aa",
+        "width": 3
+      }
+    },
     "draggable": true,
-    "gravity": "TOP_LEFT",
-
-    "titleTextSize": 22,
-    "titleTextColor": "#FFFFFF",
-    "titleAlignment": "CENTER"
+    "title": {
+      "text": "FlexMenu",
+      "color": "#ffffff",
+      "size": 18,
+      "center": true
+    }
   },
 
-  "sections": [
-    {
-      "name": "Player",
-      "x": 20,
-      "y": 80,
-      "textSize": 18,
-      "textColor": "#AAAAAA"
+  "floating_icon": {
+    "enabled": true,
+    "shape": "circle",
+    "size": 70,
+    "color": "#5a00aa",
+    "position": {
+      "x": 40,
+      "y": 300
     }
-  ],
+  },
 
-  "items": [
+  "elements": [
+
     {
+      "id": "txt_status",
       "type": "text",
-      "text": "Player",
-      "x": 25,
-      "y": 90,
-      "textSize": 18,
-      "textColor": "#AAAAAA"
+      "text": "Status: OFF",
+      "color": "#ff4444",
+      "size": 14,
+      "position": { "x": 20, "y": 80 }
     },
 
     {
-      "type": "switch",
-      "id": "god_mode",
-      "text": "God Mode",
-      "x": 30,
-      "y": 130,
-      "width": 460,
-      "height": 60,
-
-      "textSize": 20,
-      "textColor": "#FFFFFF",
-
-      "onColor": "#00FF88",
-      "offColor": "#444444",
-      "thumbColor": "#FFFFFF",
-
-      "borderColor": "#7A00FF",
-      "borderWidth": 2,
-      "borderRadius": 14,
-
-      "default": false,
-      "nativeFunction": "setGodMode"
-    },
-
-    {
-      "type": "switch",
-      "id": "infinite_ammo",
-      "text": "Infinite Ammo",
-      "x": 30,
-      "y": 200,
-      "width": 460,
-      "height": 60,
-
-      "textSize": 20,
-      "textColor": "#FFFFFF",
-
-      "onColor": "#00FF88",
-      "offColor": "#444444",
-
-      "borderColor": "#7A00FF",
-      "borderWidth": 2,
-      "borderRadius": 14,
-
-      "default": false,
-      "nativeFunction": "setInfiniteAmmo"
-    },
-
-    {
+      "id": "btn_minimize",
       "type": "button",
-      "id": "teleport",
-      "text": "Teleport to Marker",
-      "x": 30,
-      "y": 270,
-      "width": 460,
-      "height": 60,
-
-      "textSize": 20,
-      "textColor": "#FFFFFF",
-
-      "backgroundColor": "#7A00FF",
-      "pressedColor": "#5500AA",
-
-      "borderRadius": 16,
-      "nativeFunction": "teleportToMarker"
+      "text": "_",
+      "size": { "w": 40, "h": 40 },
+      "position": { "x": 360, "y": 10 },
+      "action": "minimize_menu"
     },
 
     {
-      "type": "checkbox",
-      "id": "noclip",
-      "text": "No Clip",
-      "x": 30,
-      "y": 340,
+      "id": "toggle_main",
+      "type": "switch",
+      "text": "Ativar Mod",
+      "position": { "x": 20, "y": 120 },
+      "on": {
+        "call": "native_enable_mod",
+        "show": ["slider_speed", "box_visual"]
+      },
+      "off": {
+        "call": "native_disable_mod",
+        "hide": ["slider_speed", "box_visual"]
+      }
+    },
 
-      "textSize": 18,
-      "textColor": "#FFFFFF",
+    {
+      "id": "slider_speed",
+      "type": "slider",
+      "min": 1,
+      "max": 100,
+      "value": 20,
+      "text": "Velocidade",
+      "position": { "x": 20, "y": 170 },
+      "dynamic": true,
+      "onChange": {
+        "call": "native_set_speed"
+      }
+    },
 
-      "checkColor": "#00FF88",
-      "default": false,
+    {
+      "id": "box_visual",
+      "type": "shape",
+      "shape": "rect",
+      "size": { "w": 120, "h": 120 },
+      "color": "#00ff99",
+      "border": {
+        "color": "#003322",
+        "width": 2
+      },
+      "position": { "x": 250, "y": 160 },
+      "layer": 2,
+      "dynamic": true
+    },
 
-      "nativeFunction": "setNoClip"
+    {
+      "id": "btn_extra",
+      "type": "button",
+      "text": "Ação Extra",
+      "position": { "x": 20, "y": 320 },
+      "dynamic": true,
+      "action": {
+        "call": "native_extra_action"
+      }
     }
+
   ]
 }
