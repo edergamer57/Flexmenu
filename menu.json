@@ -1,115 +1,36 @@
 {
   "menu": {
-    "size": {
-      "width": 420,
-      "height": 600
-    },
-    "position": {
-      "x": 100,
-      "y": 200
-    },
-    "background": {
-      "color": "#141414",
-      "radius": 18,
-      "border": {
-        "color": "#5a00aa",
-        "width": 3
-      }
-    },
-    "draggable": true,
+    "width": 280,
+    "height": 340,
+    "backgroundColor": "#121212",
+    "borderColor": "#6a00ff",
+    "borderSize": 2,
+    "cornerRadius": 12,
     "title": {
-      "text": "FlexMenu",
+      "text": "Vice Online Mod",
       "color": "#ffffff",
-      "size": 18,
-      "center": true
-    }
-  },
-
-  "floating_icon": {
-    "enabled": true,
-    "shape": "circle",
-    "size": 70,
-    "color": "#5a00aa",
-    "position": {
-      "x": 40,
-      "y": 300
+      "size": 16
     }
   },
 
   "elements": [
-
     {
-      "id": "txt_status",
       "type": "text",
-      "text": "Status: OFF",
-      "color": "#ff4444",
-      "size": 14,
-      "position": { "x": 20, "y": 80 }
+      "text": "Player",
+      "color": "#aaaaaa",
+      "size": 14
     },
-
     {
-      "id": "btn_minimize",
-      "type": "button",
-      "text": "_",
-      "size": { "w": 40, "h": 40 },
-      "position": { "x": 360, "y": 10 },
-      "action": "minimize_menu"
-    },
-
-    {
-      "id": "toggle_main",
       "type": "switch",
-      "text": "Ativar Mod",
-      "position": { "x": 20, "y": 120 },
-      "on": {
-        "call": "native_enable_mod",
-        "show": ["slider_speed", "box_visual"]
-      },
-      "off": {
-        "call": "native_disable_mod",
-        "hide": ["slider_speed", "box_visual"]
-      }
+      "text": "God Mode",
+      "id": "godmode",
+      "colorOn": "#6a00ff",
+      "colorOff": "#444444"
     },
-
     {
-      "id": "slider_speed",
-      "type": "slider",
-      "min": 1,
-      "max": 100,
-      "value": 20,
-      "text": "Velocidade",
-      "position": { "x": 20, "y": 170 },
-      "dynamic": true,
-      "onChange": {
-        "call": "native_set_speed"
-      }
-    },
-
-    {
-      "id": "box_visual",
-      "type": "shape",
-      "shape": "rect",
-      "size": { "w": 120, "h": 120 },
-      "color": "#00ff99",
-      "border": {
-        "color": "#003322",
-        "width": 2
-      },
-      "position": { "x": 250, "y": 160 },
-      "layer": 2,
-      "dynamic": true
-    },
-
-    {
-      "id": "btn_extra",
-      "type": "button",
-      "text": "Ação Extra",
-      "position": { "x": 20, "y": 320 },
-      "dynamic": true,
-      "action": {
-        "call": "native_extra_action"
-      }
+      "type": "switch",
+      "text": "Infinite Ammo",
+      "id": "ammo"
     }
-
   ]
 }
