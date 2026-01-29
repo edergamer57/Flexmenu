@@ -1,36 +1,68 @@
 {
   "menu": {
-    "width": 280,
-    "height": 340,
-    "backgroundColor": "#121212",
-    "borderColor": "#6a00ff",
-    "borderSize": 2,
-    "cornerRadius": 12,
+    "width": 320,
+    "height": 450,
+    "x": 50,
+    "y": 50,
+    "backgroundColor": "#181818",
+    "borderColor": "#4b0082",  // Roxo Escuro (Dark Violet)
+    "borderSize": 4,
+    "cornerRadius": 18,
     "title": {
-      "text": "Vice Online Mod",
+      "text": "Menu Principal (Clique para Minimizar)",
       "color": "#ffffff",
-      "size": 16
+      "size": 18
+    },
+    "minimized": {
+      "width": 180,
+      "backgroundColor": "#333333",
+      "borderColor": "#8a2be2", // Roxo mais claro para o estado minimizado
+      "borderSize": 2,
+      "cornerRadius": 10,
+      "title": {
+        "text": "Menu Recolhido",
+        "color": "#8a2be2",
+        "size": 14
+      }
     }
   },
-
   "elements": [
     {
       "type": "text",
-      "text": "Player",
-      "color": "#aaaaaa",
-      "size": 14
+      "text": ":: Opções Visuais ::",
+      "color": "#00ff99",
+      "size": 16
     },
     {
       "type": "switch",
-      "text": "God Mode",
-      "id": "godmode",
-      "colorOn": "#6a00ff",
-      "colorOff": "#444444"
+      "id": "esp_players",
+      "text": "Mostrar Jogadores (ESP)"
     },
     {
       "type": "switch",
-      "text": "Infinite Ammo",
-      "id": "ammo"
+      "id": "esp_vehicles",
+      "text": "Mostrar Veículos"
+    },
+    {
+      "type": "text",
+      "text": ":: Opções de Jogo ::",
+      "color": "#00ff99",
+      "size": 16
+    },
+    {
+      "type": "switch",
+      "id": "god_mode",
+      "text": "Modo Deus"
+    },
+    {
+      "type": "switch",
+      "id": "unlimited_ammo",
+      "text": "Munição Infinita"
+    },
+    {
+      "type": "switch",
+      "id": "no_recoil",
+      "text": "Sem Recuo"
     }
   ]
 }
