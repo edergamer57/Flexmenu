@@ -41,10 +41,10 @@
       },
 
       "colors": {
-        "trackOn": "#6a00ff",
-        "trackOff": "#333333",
+        "trackOn": "#ac11b8",
+        "trackOff": "#b47ce6",
         "thumbOn": "#ffffff",
-        "thumbOff": "#aaaaaa"
+        "thumbOff": "#421141"
       }
     }]
 }
