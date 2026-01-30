@@ -5,64 +5,46 @@
     "x": 50,
     "y": 50,
     "backgroundColor": "#181818",
-    "borderColor": "#4b0082",  // Roxo Escuro (Dark Violet)
+    "borderColor": "#4b0082",
     "borderSize": 4,
     "cornerRadius": 18,
     "title": {
-      "text": "Menu Principal (Clique para Minimizar)",
+      "text": "Valley Client",
       "color": "#ffffff",
       "size": 18
-    },
-    "minimized": {
-      "width": 180,
-      "backgroundColor": "#333333",
-      "borderColor": "#8a2be2", // Roxo mais claro para o estado minimizado
-      "borderSize": 2,
-      "cornerRadius": 10,
-      "title": {
-        "text": "Menu Recolhido",
-        "color": "#8a2be2",
-        "size": 14
-      }
     }
   },
   "elements": [
-    {
-      "type": "text",
-      "text": ":: Opções Visuais ::",
-      "color": "#00ff99",
-      "size": 16
-    },
+  {
+    "type": "text",
+    "text": "__-ESP-__",
+    "color": "#41066b",
+    "size": 16
+  },
     {
       "type": "switch",
       "id": "esp_players",
-      "text": "Mostrar Jogadores (ESP)"
-    },
-    {
-      "type": "switch",
-      "id": "esp_vehicles",
-      "text": "Mostrar Veículos"
-    },
-    {
-      "type": "text",
-      "text": ":: Opções de Jogo ::",
-      "color": "#00ff99",
-      "size": 16
-    },
-    {
-      "type": "switch",
-      "id": "god_mode",
-      "text": "Modo Deus"
-    },
-    {
-      "type": "switch",
-      "id": "unlimited_ammo",
-      "text": "Munição Infinita"
-    },
-    {
-      "type": "switch",
-      "id": "no_recoil",
-      "text": "Sem Recuo"
-    }
-  ]
+      "text": "Mostrar Jogadores (ESP)",
+
+      "layout": {
+        "marginLeft": 12,
+        "marginTop": 6,
+        "marginBottom": 6,
+        "align": "start",
+        "reverse": false
+      },
+
+      "switch": {
+        "minWidth": 90,
+        "thumbTextPadding": 14,
+        "textPaddingEnd": 24
+      },
+
+      "colors": {
+        "trackOn": "#6a00ff",
+        "trackOff": "#333333",
+        "thumbOn": "#ffffff",
+        "thumbOff": "#aaaaaa"
+      }
+    }]
 }
